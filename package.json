@@ -1,0 +1,94 @@
+{
+  "version": "1.0.0",
+  "keywords": [
+    "strapi",
+    "plugin",
+    "csv",
+    "export",
+    "content",
+    "data",
+    "download"
+  ],
+  "type": "commonjs",
+  "exports": {
+    "./package.json": "./package.json",
+    "./strapi-admin": {
+      "source": "./admin/src/index.js",
+      "import": "./dist/admin/index.mjs",
+      "require": "./dist/admin/index.js",
+      "default": "./dist/admin/index.js"
+    },
+    "./strapi-server": {
+      "source": "./server/src/index.js",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "strapi-plugin build",
+    "watch": "strapi-plugin watch",
+    "watch:link": "strapi-plugin watch:link",
+    "verify": "strapi-plugin verify",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@strapi/design-system": "^2.0.0-rc.21",
+    "@strapi/icons": "^2.0.0-rc.21",
+    "exceljs": "^4.4.0",
+    "react-data-table-component": "^7.7.0",
+    "react-intl": "^7.1.10"
+  },
+  "devDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.12.1",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.5.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jest": "^27.9.0",
+    "eslint-plugin-react": "^7.34.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier": "^3.5.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0",
+    "styled-components": "^6.1.16"
+  },
+  "peerDependencies": {
+    "@strapi/sdk-plugin": "^5.3.2",
+    "@strapi/strapi": "^5.12.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0",
+    "styled-components": "^6.1.16"
+  },
+  "strapi": {
+    "kind": "plugin",
+    "name": "csv-export",
+    "displayName": "CSV Export",
+    "description": "A powerful plugin to export your Strapi content types to CSV format with customizable fields and filtering options."
+  },
+  "name": "strapi-plugin-csv-export",
+  "description": "A powerful Strapi plugin that enables easy export of content types to CSV format, with support for field selection, filtering, and batch operations.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shub1970/strapi-csv-export.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Shub1970/strapi-csv-export/issues"
+  },
+  "homepage": "https://github.com/Shub1970/strapi-csv-export#readme",
+  "author": "shubha kumar <18shubham1998@gmail.com>"
+}
