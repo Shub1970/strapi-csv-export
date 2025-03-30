@@ -1,6 +1,6 @@
 # 🚀 Strapi CSV Export Plugin
 
-A powerful Strapi v4 plugin that enables easy export of content types to CSV format. This plugin provides a user-friendly interface to export your Strapi content with customizable field selection, filtering options, and batch operations.
+A powerful Strapi v5 plugin that enables easy export of content types to CSV format. This plugin provides a user-friendly interface to export your Strapi content with customizable field selection, filtering options, and batch operations.
 
 ![Strapi CSV Export Banner](https://raw.githubusercontent.com/Shub1970/strapi-csv-export/main/assets/banner.png)
 
@@ -21,8 +21,8 @@ A powerful Strapi v4 plugin that enables easy export of content types to CSV for
 
 ## 🔧 Requirements
 
-- Strapi v4.x.x
-- Node.js >=14.19.1 <=20.x.x
+- Strapi v5.x.x
+- Node.js >=14.19.1 <=22.x.x
 - NPM >= 6.0.0
 
 ## 📦 Installation
@@ -55,8 +55,8 @@ module.exports = {
       encoding: 'utf8', // File encoding (default: 'utf8')
       exportPath: './exports', // Path for temporary export files (default: './exports')
       dateFormat: 'YYYY-MM-DD HH:mm:ss', // Date format in exports (default: 'YYYY-MM-DD HH:mm:ss')
-    }
-  }
+    },
+  },
 };
 ```
 
@@ -106,6 +106,7 @@ pnpm run develop
 #### 2. Filtering Options
 
 Filter your data before export:
+
 - Date range filters
 - Status filters (published/draft)
 - Custom field filters
@@ -115,6 +116,7 @@ Filter your data before export:
 #### 3. Batch Operations
 
 Export specific entries:
+
 1. Select entries using checkboxes
 2. Click "Export Selected" to export only chosen entries
 3. Use "Select All" for bulk operations
@@ -122,6 +124,7 @@ Export specific entries:
 ### Export Format
 
 The exported CSV file includes:
+
 - UTF-8 encoding with BOM for Excel compatibility
 - Configurable delimiter (default: comma)
 - Proper escaping of special characters
@@ -129,6 +132,7 @@ The exported CSV file includes:
 - Relation data resolution
 
 Example output:
+
 ```csv
 id,title,author,publishedAt,categories
 1,"My First Post","John Doe","2024-03-30","Tech,News"
@@ -160,10 +164,12 @@ We love your input! We want to make contributing to Strapi CSV Export as easy an
 ### Common Issues
 
 1. **Export button not visible**
+
    - Ensure the plugin is properly installed and enabled
    - Check user permissions in Strapi admin
 
 2. **Export fails with large datasets**
+
    - Adjust `maxExportCount` in configuration
    - Use filters to reduce dataset size
 
@@ -181,9 +187,9 @@ module.exports = {
   'csv-export': {
     enabled: true,
     config: {
-      debug: true // Enable detailed logging
-    }
-  }
+      debug: true, // Enable detailed logging
+    },
+  },
 };
 ```
 
@@ -206,6 +212,7 @@ module.exports = {
 ## ⭐ Show your support
 
 If this plugin helps you, please consider:
+
 - Giving it a star on GitHub
 - Sharing it with your team and friends
 - [Contributing](#-contributing) to make it better
