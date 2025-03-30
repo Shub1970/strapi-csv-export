@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "5.0.1",
   "keywords": [
     "strapi",
     "plugin",
@@ -85,7 +85,7 @@
     "displayName": "CSV Export",
     "description": "A powerful plugin to export your Strapi content types to CSV format with customizable fields and filtering options."
   },
-  "name": "strapi-plugin-csv-export",
+  "name": "strapi5-plugin-csv-export",
   "description": "A powerful Strapi plugin that enables easy export of content types to CSV format, with support for field selection, filtering, and batch operations.",
   "license": "MIT",
   "repository": {
