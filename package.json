@@ -7,8 +7,14 @@
     "export",
     "content",
     "data",
-    "download"
+    "download",
+    "content-type",
+    "strapi-plugin"
   ],
+  "engines": {
+    "node": ">=14.19.1 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
   "type": "commonjs",
   "exports": {
     "./package.json": "./package.json",
